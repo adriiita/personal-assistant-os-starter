@@ -24,6 +24,7 @@ Keep in mind:
 
 - Claude-specific hooks and slash commands belong only in `.claude/`
 - those should stay thin and should point back to the shared core
+- Anthropic now treats custom commands and skills as converging surfaces, so commands are best used as a convenience layer, not as the architecture
 
 ## Codex
 
@@ -37,6 +38,7 @@ Keep in mind:
 
 - do not assume Codex has Claude-style hooks
 - use `.codex/` as an adapter and context surface, not a duplicate system
+- OpenAI's official Codex guidance centers on `AGENTS.md` plus built-in CLI commands; I did not find an official repo-local custom slash-command surface to mirror Claude's
 
 ## Gemini CLI
 
@@ -50,6 +52,7 @@ Keep in mind:
 
 - Gemini-specific state should not become the main system
 - keep Gemini guidance thin and point it back to `.ai/`
+- Gemini CLI officially supports built-in slash commands and custom commands, but the starter does not need a Gemini command layer by default to work well
 
 ## Other Agents
 

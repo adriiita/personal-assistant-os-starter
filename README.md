@@ -29,6 +29,7 @@ This starter is built around a different idea:
 - An `auto-research` skill for structured research loops and synthesis
 - Docs for both humans and AI agents
 - Root instruction files for `AGENTS.md`, `CLAUDE.md`, and `GEMINI.md`
+- Optional Claude slash commands for people who want a convenience layer
 
 ## What You Do Not Get By Default
 
@@ -73,6 +74,12 @@ That means:
 - your notes still make sense even without any AI attached
 
 Read [docs/provider-map.md](docs/provider-map.md) for the runtime differences.
+
+## Optional Runtime Extras
+
+- Claude Code users can use the optional commands in `.claude/commands/`
+- Codex users should rely on `AGENTS.md` plus built-in Codex commands
+- Gemini users can rely on `GEMINI.md`; custom commands can be added later if needed
 
 ## Recommended Install Links
 

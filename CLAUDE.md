@@ -22,6 +22,13 @@ The shared truth lives in `.ai/`:
 
 Claude-specific logic belongs in `.claude/`.
 
+## Optional Commands
+
+If you use Claude Code slash commands, this repo includes an optional `.claude/commands/` layer.
+
+Those commands are convenience wrappers only.
+The real logic should still point back to `.ai/playbooks/` and `.ai/skills/`.
+
 ## Setup Rule
 
 If the user asks Claude to personalize the system:

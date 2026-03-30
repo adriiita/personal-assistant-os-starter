@@ -34,6 +34,9 @@ Pick your runtime:
 
 Then copy the matching prompt from [setup-for-ai.md](setup-for-ai.md).
 
+If you use Claude Code and like slash commands, this starter also includes optional commands in `.claude/commands/`.
+You can use those instead of pasting the longer setup prompt every time.
+
 ## Step 5
 
 Let the agent onboard you.
