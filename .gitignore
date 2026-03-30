@@ -1,0 +1,8 @@
+.DS_Store
+.obsidian/workspace.json
+.obsidian/workspaces.json
+.obsidian/cache/
+.claude/settings.local.json
+.gemini/
+.env
+node_modules/
