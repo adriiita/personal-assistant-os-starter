@@ -15,8 +15,11 @@ Treat `.ai/` as the canonical source of truth.
 
 Use runtime folders only as adapters:
 
+- `.agents/` as a generic skill compatibility surface
 - `.claude/` for Claude-specific behavior
 - `.codex/` for Codex-specific behavior
+
+Shared skills live in `.ai/skills/` and may be surfaced through `.agents/skills/`, `.claude/skills/`, and `.codex/skills/`.
 
 ## Intended Behavior
 

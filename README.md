@@ -27,6 +27,7 @@ This starter is built around a different idea:
 - Shared memory files for preferences, projects, learnings, skill observations, and runtime work status
 - A better onboarding skill that interviews the user, recommends what to enable, and updates the vault accordingly
 - An `auto-research` skill for structured research loops and synthesis
+- Shared skills in `.ai/skills/`, surfaced through `.claude/skills`, `.codex/skills`, and `.agents/skills`
 - Docs for both humans and AI agents
 - Root instruction files for `AGENTS.md`, `CLAUDE.md`, and `GEMINI.md`
 - Optional Claude slash commands for people who want a convenience layer
@@ -65,7 +66,7 @@ Read [docs/user-flow.md](docs/user-flow.md) if you want the detailed walkthrough
 ## Runtime Model
 
 The core lives in `.ai/`.
-The runtime surfaces live in `.claude/`, `.codex/`, and root instruction files like `GEMINI.md`.
+The runtime surfaces live in `.claude/`, `.codex/`, `.agents/`, and root instruction files like `GEMINI.md`.
 
 That means:
 
@@ -78,6 +79,7 @@ Read [docs/provider-map.md](docs/provider-map.md) for the runtime differences.
 ## Optional Runtime Extras
 
 - Claude Code users can use the optional commands in `.claude/commands/`
+- all runtime skill surfaces point back to `.ai/skills/`
 - Codex users should rely on `AGENTS.md` plus built-in Codex commands
 - Gemini users can rely on `GEMINI.md`; custom commands can be added later if needed
 
@@ -93,6 +95,7 @@ Read [docs/provider-map.md](docs/provider-map.md) for the runtime differences.
 ```text
 .
 ├── .ai/                 # shared canonical core
+├── .agents/             # generic skill adapter surface
 ├── .claude/             # Claude-specific runtime layer
 ├── .codex/              # Codex-specific runtime layer
 ├── .github/             # lightweight repo automation

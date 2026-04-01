@@ -12,6 +12,12 @@ Always shared:
 - `.ai/playbooks/`
 - `.ai/skills/`
 
+Compatibility surfaces may point back to the shared skills layer:
+
+- `.agents/skills/`
+- `.claude/skills/`
+- `.codex/skills/`
+
 ## Claude
 
 Good at:

@@ -13,6 +13,14 @@ link_file() {
   ln -s "$target" "$runtime_dir/$name"
 }
 
+link_dir() {
+  local target="$1"
+  local link_path="$2"
+  mkdir -p "$(dirname "$link_path")"
+  rm -f "$link_path"
+  ln -s "$target" "$link_path"
+}
+
 for file in learnings.md user_preferences.md user_projects.md skill-observations.md; do
   link_file "$ROOT_DIR/.claude/context/memory" "$file"
   link_file "$ROOT_DIR/.codex/context/memory" "$file"
@@ -24,4 +32,8 @@ ln -s "../../../.ai/memory/runtime/claude-work-status.md" "$ROOT_DIR/.claude/con
 rm -f "$ROOT_DIR/.codex/context/memory/work_status.md"
 ln -s "../../../.ai/memory/runtime/codex-work-status.md" "$ROOT_DIR/.codex/context/memory/work_status.md"
 
-echo "Runtime memory adapters linked."
+link_dir "../.ai/skills" "$ROOT_DIR/.agents/skills"
+link_dir "../.ai/skills" "$ROOT_DIR/.claude/skills"
+link_dir "../.ai/skills" "$ROOT_DIR/.codex/skills"
+
+echo "Runtime memory and skill adapters linked."
